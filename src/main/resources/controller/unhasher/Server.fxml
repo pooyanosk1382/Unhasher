@@ -14,13 +14,13 @@
                 <Font name="System Bold Italic" size="18.0" />
             </font>
         </Label>
-        <Button layoutX="265.0" layoutY="202.0" mnemonicParsing="false" onAction="#Confirmation" onDragEntered="#Confirmation" prefHeight="26.0" prefWidth="124.0" text="Confirm" />
+        <Button layoutX="265.0" layoutY="202.0" mnemonicParsing="false" onAction="#Confirmation" prefHeight="26.0" prefWidth="124.0" text="Confirm" />
         <Label layoutX="142.0" layoutY="310.0" prefHeight="58.0" prefWidth="179.0" text="The hashed code is :" textFill="WHITE">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label fx:id="HashedLabel" layoutX="321.0" layoutY="310.0" prefHeight="58.0" prefWidth="179.0" textFill="WHITE">
+        <Label fx:id="HashedLabel" layoutX="321.0" layoutY="310.0" prefHeight="58.0" prefWidth="342.0" textFill="WHITE">
             <font>
                 <Font size="18.0" />
             </font>
