@@ -18,21 +18,28 @@ public class MainServer {
                 Socket socket = serverSocket.accept();
                 System.out.println("Accepted");
                 RequestHandler requestHandler = new RequestHandler(socket);
-                requestHandler.start();
+
+                Thread thread = new Thread(String.valueOf(requestHandler));
+                thread.start();
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args) {
+    public void closeServerSocket() {
         try {
-            ServerSocket serverSocket = new ServerSocket(7078);
-            MainServer server = new MainServer(serverSocket);
-            System.out.println("yes");
-            server.startServer();
+            if (serverSocket != null) {
+                serverSocket.close();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) throws IOException {
+        ServerSocket serverSocket = new ServerSocket(7080);
+        MainServer server = new MainServer(serverSocket);
+        server.startServer();
     }
 }
