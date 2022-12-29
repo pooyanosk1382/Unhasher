@@ -16,3 +16,7 @@ Trie is an information retrieval data structure using which we can optimize sear
 Using Trie we can search key in O(L) time. but penality is storage requirements
 Using Trie we can do a prefix-based search, we can sort lexicographically.
 Using Hashtable also we can sort lexicographically but there we don't have prefix-based search and also regular hashtable take more space than trie.
+
+What is MD5?
+
+MD5 is a cryptographic hash function algorithm that takes the message as input of any length and changes it into a fixed-length message of 16 bytes. MD5 algorithm stands for the message-digest algorithm. MD5 was developed as an improvement of MD4, with advanced security purposes. The output of MD5 (Digest size) is always 128 bits. MD5 was developed in 1991 by Ronald Rivest.
