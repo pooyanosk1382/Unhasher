@@ -20,3 +20,9 @@ Using Hashtable also we can sort lexicographically but there we don't have prefi
 What is MD5?
 
 MD5 is a cryptographic hash function algorithm that takes the message as input of any length and changes it into a fixed-length message of 16 bytes. MD5 algorithm stands for the message-digest algorithm. MD5 was developed as an improvement of MD4, with advanced security purposes. The output of MD5 (Digest size) is always 128 bits. MD5 was developed in 1991 by Ronald Rivest.
+
+Use Of MD5 Algorithm:
+
+    It is used for file authentication.
+    In a web application, it is used for security purposes. e.g. Secure password of users etc.
+    Using this algorithm, We can store our password in 128 bits format. 
