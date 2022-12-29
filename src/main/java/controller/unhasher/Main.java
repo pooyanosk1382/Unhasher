@@ -1,31 +1,52 @@
 package controller.unhasher;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
-
 import java.util.Scanner;
 
-public class Main extends Application{
-//    public static void main(String[] args) throws Exception {
-//        Node root = new Node();
-//        String st = MD5.createPassword("pofak");
-//        System.out.println(st);
-//        root.trieInsert(root, st, 0, "pofak");
-//        root.trieSearch(root, st, 0);
-//        String pd = MD5.createPassword("pooyan");
-//        root.trieInsert(root, pd, 0, "pooyan");
-//        root.trieSearch(root, pd, 0);
-//        String ad = MD5.createPassword("ali");
-//        root.trieSearch(root, ad, 0);
-//    }
-
-    public static void main(String[] args) throws Exception{
-        launch(args);
+public class Main{
+    static Node root = new Node();
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        while (true) {
+            showMenu();
+            String c = in.next();
+            switch (c) {
+                case "1": {
+                    System.out.print("enter your data : ");
+                    String data = in.next();
+                    addHash(data);
+                    break;
+                }
+                case "2": {
+                    System.out.print("enter your data : ");
+                    String data = in.next();
+                    searchHash(data);
+                    break;
+                }
+                case "3":
+                    return;
+                default:
+                    System.out.println("not available");
+                    break;
+            }
+        }
     }
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        PageController.open("Server");
+    private static void searchHash(String data) {
+        root.trieSearch(root, data, 0);
+    }
+
+    private static void addHash(String data) {
+        root.trieInsert(root, MD5.createHash(data), 0, data);
+        System.out.println("Your hash value is : " + MD5.createHash(data));
+        System.out.println("Your data has been added");
+    }
+
+    public static void showMenu() {
+        System.out.println("=================");
+        System.out.println("   1.add hash");
+        System.out.println("   2.search hash");
+        System.out.println("   3.exit");
+        System.out.println("=================");
     }
 
 }

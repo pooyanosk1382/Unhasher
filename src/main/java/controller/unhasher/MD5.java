@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 public class MD5 {
-    public static String createPassword(String originalPassword) {
+    public static String createHash(String originalPassword) {
         final StringBuilder hexString = new StringBuilder();
         try {
             final MessageDigest digest = MessageDigest.getInstance("MD5");
