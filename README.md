@@ -24,5 +24,7 @@ MD5 is a cryptographic hash function algorithm that takes the message as input o
 # Usage Of MD5 Algorithm:
 
 It is used for file authentication.
+
 In a web application, it is used for security purposes. e.g. Secure password of users etc.
+
 Using this algorithm, We can store our password in 128 bits format. 
